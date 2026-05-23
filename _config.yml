@@ -1,1 +1,18 @@
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  
+title: Eigenvectors and Elections
+description: A blog about election data science and political analysis. 
+remote_theme: pages-themes/merlot@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
 
+#show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
+#google_analytics: [Your Google Analytics tracking ID]
