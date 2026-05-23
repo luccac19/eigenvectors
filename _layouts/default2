@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="flag-bar"></div>
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</header>
+
+<div class="back-home-wrapper">
+  <a class="back-home-button" href="{{ '/' | relative_url }}">
+    ← Back To Home
+  </a>
+</div>
+
+<main class="container">
+  {{ content }}
+</main>
+
+<main class="container">
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p>
+</footer>
+
+</body>
+</html>
