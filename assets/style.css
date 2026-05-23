@@ -3,18 +3,19 @@ body {
   font-family: Georgia, serif;
   background: #f8f5f0;
   color: #1d1d1d;
+  line-height: 1.7;
 }
 
+/* Header */
 .site-header {
   text-align: center;
-  padding: 2rem 1rem;
-  background: #0a3d91; /* flag blue */
-  color: #ff8c00;      /* Americana orange */
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  padding: 2.5rem 1rem;
+  background: #0a3d91;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Top and bottom flag stripes */
+/* Americana stripes */
 .site-header::before,
 .site-header::after {
   content: "";
@@ -22,7 +23,7 @@ body {
   height: 10px;
   background: repeating-linear-gradient(
     90deg,
-    #c62828,
+    #c62828 0px,
     #c62828 20px,
     #ffffff 20px,
     #ffffff 40px
@@ -30,64 +31,123 @@ body {
 }
 
 .site-header::before {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .site-header::after {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
+/* Site title */
 .site-header h1 {
   margin: 0;
-  font-size: 2.5rem;
-  color: #ff8c00; /* orange text */
+  font-size: 3rem;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
+/* Subtitle */
 .site-header p {
-  margin: 0.5rem 0 0;
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
   color: #ff8c00;
 }
 
-/* Layout */
+/* Main layout */
 .container {
   max-width: 850px;
   margin: auto;
   padding: 2rem;
 }
 
-/* Posts list */
+/* Post cards */
 .post-card {
-  background: white;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  background: #ffffff;
+  padding: 1.75rem;
+  margin-bottom: 1.75rem;
   border-left: 6px solid #0a3d91;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Post titles */
+.post-card h3 {
+  margin-top: 0;
 }
 
 .post-card h3 a {
   color: #c62828;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .post-card h3 a:hover {
+  color: #0a3d91;
   text-decoration: underline;
 }
 
-/* Single post */
-.post h1 {
-  color: #0a3d91;
-}
-
+/* Meta info */
 .meta {
   color: #777;
   font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Read more link */
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0a3d91;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Single post page */
+.post h1 {
+  color: #0a3d91;
+  margin-top: 0;
 }
 
 /* Footer */
-.site-footer {
-  text-align: center;
-  padding: 2rem;
+.site-footer,
+footer {
   background: #0a3d91;
   color: white;
-  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border: none;
+}
+
+/* Prevent theme wrapper issues */
+.site-footer *,
+footer * {
+  background: transparent;
+  color: white;
+}
+
+/* Footer text */
+.site-footer p,
+footer p {
+  margin: 0;
+}
+
+/* Links */
+a {
+  color: #0a3d91;
+}
+
+a:hover {
+  color: #c62828;
 }
