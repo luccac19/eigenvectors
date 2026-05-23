@@ -6,13 +6,28 @@ title: Home
 test2
 # Blog Posts
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">
+{% for post in site.posts %}
+  <article class="post-card">
+
+    <h3>
+      <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
-      <small>{{ post.date | date: "%B %d, %Y" }}</small>
-    </li>
-  {% endfor %}
-</ul>
+    </h3>
+
+    <p>
+      {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+
+    <div>
+      {{ post.excerpt }}
+    </div>
+
+    <p>
+      <a href="{{ post.url | relative_url }}">
+        Read More →
+      </a>
+    </p>
+
+  </article>
+{% endfor %}
