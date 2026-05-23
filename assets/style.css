@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
 }
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -60,11 +61,14 @@ body {
 }
 
 /* Main layout */
-.container {
-  max-width: 850px;
-  margin: auto;
-  padding: 2rem;
+main {
   flex: 1;
+}
+.container {
+  max-width: 1000px;   /* wider than before */
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
 }
 /* Post cards */
 .post-card {
