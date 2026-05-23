@@ -9,5 +9,4 @@ kramdown:
   syntax_highlighter: rouge
   
 title: Eigenvectors and Elections
-description: A blog about election data science and political analysis. 
-
+description: A blog about election data science. 
