@@ -94,7 +94,7 @@ main {
   max-width: 850px;   /* wider than before */
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem; 
 }
 /* Post cards */
 .post-card {
