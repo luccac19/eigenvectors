@@ -7,7 +7,27 @@ html, body {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mini-header {
+  background: #0a3d91;
+  padding: 1.25rem 1rem;
+  position: relative;
+}
 
+/* Single Americana stripe */
+.mini-header::after {
+  content: "";
+  display: block;
+  height: 10px;
+  margin-top: 0.75rem;
+
+  background: repeating-linear-gradient(
+    90deg,
+    #c62828 0px,
+    #c62828 20px,
+    #ffffff 20px,
+    #ffffff 40px
+  );
+}
 .back-home-button {
   display: inline-block;
   padding: 0.5rem 1rem;
