@@ -10,3 +10,5 @@ kramdown:
   
 title: Eigenvectors and Elections
 description: A blog about election data science. 
+plugins:
+  - jekyll-feed
